@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Document</title>
+      <script>
+      
+      var cars = ['BMW','AUDI','TATA'];
+    //   for(let car of cars){
+    //       console.log(car);
+    //   }
+
+    var itr = cars[Symbol.iterator]();// returns an iterator
+    // console.log(itr.next());
+    // console.log(itr.next());
+    // console.log(itr.next());
+    // console.log(itr.next());
+
+    var cars = ['BMW','AUDI','TATA'];
+
+    //var carItr = cars.entries();
+   // console.log(carItr.next());
+
+    // for(let c of cars.entries()){
+    //     console.log(c.next());
+    // }
+
+    function* empIdGenerator(){
+        var index = 0;
+        while(index < 10){
+            yield  'EMPID'+ (index++);// return the current value of index & preserve the previous value
+        }
+    }
+
+    let gen = empIdGenerator();
+    
+    console.log(gen.next().value);
+    console.log(gen.next().value);
+    console.log(gen.next().value);
+    
+    
+    
+      
+      </script>
+</head>
+<body>
+    
+</body>
+</html>

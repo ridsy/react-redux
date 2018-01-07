@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Document</title>
+     <script>
+     
+     var cityData = new Set(); //  unique collection
+     cityData.add('Pune');
+     cityData.add('Noida');     
+     cityData.add('Goa');
+     cityData.add('Noida');
+     cityData.add('Gurugram').add('Mumbai').add('Hampi');
+
+     console.log(cityData.has('Pune'));
+     cityData.delete('Noida');
+     console.log(cityData.size);// length
+
+     for(let c of cityData){
+         console.log(c);
+     }
+
+     var countries = ['India','US','Australia'];
+
+     let setOfCountries = new Set(countries);
+     console.log(setOfCountries.size);
+
+     // Maps
+
+    let map = new Map();
+    map.set("Mumbai","Maharashtra");    
+    map.set("Pune","Maharashtra");
+    map.set("Mumbai","MH");
+    map.set("Noida","UP");
+    
+     console.log(map.get("Pune"));// value !
+     //map.clear();// delete all elements
+     //console.log(map.size);
+
+     for(let entry of map){
+         console.log(entry[0] + " is in " + entry[1]);
+     }
+
+    //  let cityiterator = map.entries();// returns an iterator !
+    //  let nextCity = cityiterator.next();
+    //  console.log(nextCity.value[0] + " is in  " + nextCity.value[1]);
+    //  // 100 lines of code !
+    //  nextCity = cityiterator.next();
+    //  console.log(nextCity.value[0] + " is in  " + nextCity.value[1]);
+        
+
+     //console.log(cityiterator.next());
+     // 100 lines of code !
+     //console.log(cityiterator.next());
+
+
+     </script>
+</head>
+<body>
+    
+</body>
+</html>
